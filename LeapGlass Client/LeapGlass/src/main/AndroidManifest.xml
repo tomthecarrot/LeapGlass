@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.carrotcorp.leapglass" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.google.android.glass.permission.DEVELOPMENT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.carrotcorp.leapglass.LeapGlassMain"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/glass_voice_trigger" />
+        </activity>
+
+        <service
+            android:name="com.carrotcorp.leapglass.LeapGlassService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.carrotcorp.leapglass.LeapGlassDemo"
+            android:label="LeapGlass Demo" >
+        </activity>
+    </application>
+
+</manifest>

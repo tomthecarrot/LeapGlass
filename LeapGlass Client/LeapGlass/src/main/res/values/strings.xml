@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LeapGlass</string>
+    <string name="welcome">Tap to start.</string>
+    <string name="instruct_info">This is an app that interfaces with a LEAP Motion controller. To begin, start the LeapGlass app on your PC. Then tap the touchpad on the side of Glass.</string>
+    <string name="instruct_bt">Tap to search for Bluetooth devices. When your PC appears, scroll to highlight it and tap the touchpad on the side of Glass.</string>
+    <string name="glass_voice_trigger">hand motion</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_leap_glass_demo">LeapGlassDemo</string>
+
+</resources>
