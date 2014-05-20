@@ -20,4 +20,6 @@ Open a terminal console or command line and type: ```adb uninstall com.carrotcor
 CAUTION: This app is not well-tested. Many things may not work. I am not responsible for anything that may happen as a result of installing and using this app. That being said, if you want to try out Leap Motion with Google Glass, go ahead!  
 Please feel free to submit a report through the issue tracker if you find any bugs.
 
+This app is inspired by Laen from OSH Park.
+
 Licensed under the CarrotCorp Open Source License 1.0. See LICENSE file for more information.
