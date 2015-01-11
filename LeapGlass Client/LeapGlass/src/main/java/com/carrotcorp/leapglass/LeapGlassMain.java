@@ -26,7 +26,6 @@ import java.util.ArrayList;
 public class LeapGlassMain extends Activity {
     private String appName; // the name of this app
     private TextView descView; // description text view
-    private ListView listView; // dynamic list view of Bluetooth device names and addresses
     private ArrayAdapter<String> list; // dynamic list object of Bluetooth device names and address
     private ArrayList<BluetoothDevice> listDevices; //dynamic list object of Bluetooth device objects
     private int currentSlide = 0; // current slide of view information
@@ -51,26 +50,6 @@ public class LeapGlassMain extends Activity {
         setTheme(android.R.style.Theme_Holo_NoActionBar_Fullscreen);
         setContentView(R.layout.activity_main);
         descView = (TextView) findViewById(R.id.descView);
-        listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(list);
-        list.setNotifyOnChange(true);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int index, long length) {
-                // Get the address of the device
-                BluetoothDevice device = listDevices.get(index);
-                String btAddress = device.getAddress();
-
-                Log.i(appName, "list item clicked: " + btAddress);
-
-                // Connect to the device
-                descView.setText("Connecting to " + device.getName() + "...");
-
-                Intent intent = new Intent(ACTION_BT_CONNECT);
-                intent.putExtra("device", device);
-                sendBroadcast(intent);
-            }
-        });
 
         // Register action event listener with filters
         IntentFilter brFilter1 = new IntentFilter(LeapGlassMain.ACTION_SET_DESC);
@@ -80,7 +59,7 @@ public class LeapGlassMain extends Activity {
         registerReceiver(br, brFilter2);
         registerReceiver(br, brFilter3);
 
-        // Start LeapGlassService to handle LEAP Motion events AND Bluetooth events
+        // Start LeapGlassService to handle LEAP Motion events AND network events
         Intent intent = new Intent(getApplicationContext(), LeapGlassService.class);
         startService(intent);
 
@@ -96,8 +75,6 @@ public class LeapGlassMain extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-
-        unregisterReceiver(br);
     }
 
     /**
