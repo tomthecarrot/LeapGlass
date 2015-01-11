@@ -10,9 +10,10 @@
       <configuration>
         <option name="SELECTED_BUILD_VARIANT" value="debug" />
         <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
-        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugJava" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
         <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleDebugTest" />
         <option name="SOURCE_GEN_TASK_NAME" value="generateDebugSources" />
+        <option name="TEST_SOURCE_GEN_TASK_NAME" value="generateDebugTestSources" />
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
@@ -22,49 +23,75 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
-    <output url="file://$MODULE_DIR$/LeapGlass/build/classes/debug" />
+    <output url="file://$MODULE_DIR$/LeapGlass/build/intermediates/classes/debug" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/LeapGlass">
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/source/r/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/source/aidl/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/source/buildConfig/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/source/rs/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/res/rs/debug" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/source/r/test/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/source/aidl/test/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/source/buildConfig/test/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/source/rs/test/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/res/rs/test/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/source/r/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/source/aidl/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/source/rs/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/res/rs/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/res/generated/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/source/r/test/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/source/aidl/test/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/source/buildConfig/test/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/source/rs/test/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/res/rs/test/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/build/generated/res/generated/test/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/debug/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/debug/assets" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/debug/aidl" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/debug/assets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/debug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/debug/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/debug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/main/assets" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/main/aidl" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/main/assets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/main/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/main/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/androidTest/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/androidTest/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/androidTest/assets" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/androidTest/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/androidTest/assets" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/androidTest/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/LeapGlass/src/androidTest/rs" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/apk" />
       <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/assets" />
-      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/classes" />
       <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/dependency-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/dex" />
       <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/assets" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/bundles" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/coverage-instrumented-classes" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/dependency-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/dex" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/dex-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/jacoco" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/javaResources" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/libs" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/lint" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/ndk" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/pre-dexed" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/proguard" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/res" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/rs" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/libs" />
       <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/ndk" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/outputs" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/pre-dexed" />
       <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/res" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/rs" />
+      <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/source" />
       <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/LeapGlass/build/tmp" />
     </content>
