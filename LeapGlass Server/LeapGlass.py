@@ -2,11 +2,12 @@
 This is the PC application for the LeapGlass Project.
 Code by Thomas Suarez, Chief Engineer @ CarrotCorp
 """
-import lightblue, Leap, sys, datetime
+import socket, Leap, sys, datetime
 from Leap import SwipeGesture
 
 conn = 0
 sock = 0
+PORT = 1202
 lastTime = datetime.datetime.now()
 
 class LeapListener(Leap.Listener):
@@ -60,11 +61,11 @@ class LeapListener(Leap.Listener):
                         	else:
                         		direction = "down"
                         print "direction: " + direction
-                        conn.send(direction)
+                        conn.send(direction + "\n")
                         
                     if gesture.type == Leap.Gesture.TYPE_SCREEN_TAP:
                     	print "screen tap"
-                    	conn.send("tap")
+                    	conn.send("tap\n")
 
     def state_string(self, state):
     	if state == Leap.Gesture.STATE_START:
@@ -79,23 +80,21 @@ class LeapListener(Leap.Listener):
     	if state == Leap.Gesture.STATE_INVALID:
      	   return "STATE_INVALID"
 
-def setupBluetooth():
+def initSocket():
     global conn
     global sock
 
-    # Listen for Bluetooth connections
-    sock = lightblue.socket()
-    sock.bind(("", 0))    # bind to 0 to bind to a dynamically assigned channel
+    # Listen for WiFi connections
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.bind(("192.168.0.6", PORT))
     sock.listen(1)
-    lightblue.advertise("EchoService", sock, lightblue.RFCOMM)
-    print "Advertised and listening on channel %d..." % sock.getsockname()[1]
 
     # Accept the first incoming connection
     conn, addr = sock.accept()
     print "Connected by", addr
 
     # Send the start command to Glass
-    conn.send("start")
+    conn.send("start\n")
 
 def main():
     # Create a LEAP Motion listener and controller
@@ -105,8 +104,8 @@ def main():
     # Register the listener to receive motion events
     controller.add_listener(listener)
 
-    # Set up Bluetooth communication
-    setupBluetooth()
+    # Set up WiFi socket communication
+    initSocket()
 
     # Keep this app running until the Enter key is pressed
     print "Press Enter to quit..."
@@ -115,7 +114,7 @@ def main():
     # Remove the listener when app is terminated
     controller.remove_listener(listener)
 
-    # Close Bluetooth connection
+    # Close Socket connection
     conn.close()
     sock.close()
 
