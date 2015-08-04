@@ -28,4 +28,4 @@ Please submit a report through the issue tracker if you find any bugs.
 
 This app is inspired by [Laen from OSH Park](https://twitter.com/laen/status/464843890722226176).
 
-Licensed under the CarrotCorp Open Source License 1.0.1. See LICENSE file for more information.
+Licensed under GPL v3. See LICENSE file for more information.
